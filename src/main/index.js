@@ -8,7 +8,6 @@ import { connectDatabase } from '../common/config/setDbConnection'
 import { endDbClientPool } from '../common/db/DbClient'
 
 function createWindow() {
-
   const BASE_HREF = 'main'
   // Create the browser window.
   const mainWindow = new BrowserWindow({
@@ -74,12 +73,12 @@ app.whenReady().then(() => {
   // IPC test
   ipcMain.on('ping', () => console.log('pong'))
 
-  createWindow('main')
+  createWindow()
 
   app.on('activate', function () {
     // On macOS it's common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.
-    if (BrowserWindow.getAllWindows().length === 0) createWindow('main')
+    if (BrowserWindow.getAllWindows().length === 0) createWindow()
   })
 })
 
