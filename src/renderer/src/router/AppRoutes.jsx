@@ -1,6 +1,6 @@
 import { Route, Router } from 'electron-router-dom'
 import App from '../App'
-import DbTest from '../components/DbTest'
+import DbTest from '../components/dbTest/DbTest'
 
 export const AppRoutes = () => {
   return (

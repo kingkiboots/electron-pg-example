@@ -1,4 +1,4 @@
-import Versions from './components/Versions'
+import Versions from './components/versions/Versions'
 import electronLogo from './assets/electron.svg'
 import { useNavigate } from 'react-router-dom'
 

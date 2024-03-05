@@ -3,15 +3,15 @@ import { useEffect, useId, useRef, useState, useCallback } from 'react'
 const DB_BASE_URL = 'test'
 
 export const DbTestHook = () => {
-  const dbRequest = window.DbConnection.request
-
+  
   const [data, setData] = useState([])
   const [count, setCount] = useState(0)
   const addInputRef = useRef(null)
   const targetInputRef = useRef(null)
   const updateInputRef = useRef(null)
   const inputId = useId(null)
-
+  
+  const dbRequest = window.DbConnection.request
   const fetchAll = () => dbRequest([DB_BASE_URL, 'find'].join('/'))
   const fetchByName = (param) => dbRequest([DB_BASE_URL, 'findName'].join('/'), param)
   const insertTest = (param) => dbRequest([DB_BASE_URL, 'insert'].join('/'), param)

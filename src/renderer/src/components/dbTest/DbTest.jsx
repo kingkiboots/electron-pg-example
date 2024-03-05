@@ -1,6 +1,6 @@
 import React from 'react'
-import { isNullOrBlank } from '../../../shared/util/CommonUtil'
-import { DbTestHook } from '../hooks/dbTest/DbTestHook'
+import { isNullOrBlank } from '../../../../shared/util/CommonUtil'
+import { DbTestHook } from '../../hooks/dbTest/DbTestHook'
 
 // 화면 컴포넌트에는 VIEW 관련 코드 존재
 // 데이터 처리 코드는 HOOK에
